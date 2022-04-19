@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "babel-node": "babel-node",
+    "test": "jest",
     "dev": "nodemon --exec npm run babel-node index.js",
     "start": "nodemon --exec npm run babel-node index.js"
   },
@@ -12,13 +13,17 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "build": "^0.1.4",
     "express": "^4.17.3"
   },
   "devDependencies": {
     "@babel/core": "^7.16.5",
     "@babel/node": "^7.16.5",
+    "@babel/plugin-transform-runtime": "^7.17.0",
     "@babel/preset-env": "^7.16.5",
     "babel-cli": "^6.26.0",
-    "nodemon": "^2.0.15"
+    "jest": "^27.5.1",
+    "nodemon": "^2.0.15",
+    "supertest": "^6.2.2"
   }
 }

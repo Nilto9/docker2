@@ -1,11 +1,12 @@
+// En app.js se va a instaciar exprees
 import express from "express";
-import { productos,clientes } from "./components";
+// import user from "./user/network.js";
+import { user, story } from "./components";
 
+// por ende por ahora esta archivo solo va a exportar app
 export const app = express();
-// * middlewares
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
-app.use("/productos", productos);
-app.use("/clientes", clientes);
-
+app.use("/user", user);
+app.use("/story", story);
+// las rutas deberian tener un archivo decidado para ellas
